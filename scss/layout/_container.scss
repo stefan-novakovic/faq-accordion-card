@@ -1,0 +1,122 @@
+.container {
+  min-height: 508px;
+  border-radius: 23px;
+  margin: 2rem;
+  @include flexCenter;
+  justify-content: space-between;
+  @include mqMaxW(1200px) {
+    display: block;
+    margin: 8.5rem 0.5rem 2rem;
+    width: 328px;
+    position: relative;
+    top: 5px;
+  }
+
+  background-color: $whiteColor;
+  background-image: url("../../dist/img/bg-pattern-desktop.svg");
+  background-position: -577px -295px;
+  background-repeat: no-repeat;
+  box-shadow: 0px 10px 25px -10px;
+  @include mqMaxW(1200px) {
+    background-image: url("../../dist/img/bg-pattern-mobile.svg");
+    background-position: top;
+    box-shadow: none;
+  }
+
+  .container__img-container,
+  .container__text-container {
+    width: 50%;
+    height: 100%;
+  }
+
+  .container__img-container {
+    position: relative;
+    bottom: 4px;
+    @include mqMaxW(1200px) {
+      bottom: auto;
+      width: 250px;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      height: auto;
+      position: absolute;
+    }
+  }
+
+  .picture-wrapper {
+    overflow: hidden;
+  }
+
+  .container__img-container picture {
+    position: relative;
+    left: -84px;
+    @include mqMaxW(1200px) {
+      left: 0;
+    }
+  }
+  .container__img-container > img:last-child {
+    position: absolute;
+    top: 134px;
+    left: -93px;
+    z-index: 1;
+
+    @include mqMaxW(1200px) {
+      display: none;
+    }
+  }
+
+  .container__text-container {
+    width: 350px;
+    margin-left: 0.25rem;
+    margin-right: 5.9rem;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    color: $veryDarkGrayishBlueTextColor;
+    @include mqMaxW(1200px) {
+      width: auto;
+      margin: 0 auto;
+      margin-right: 0.25rem;
+      padding: 0 1.2rem 3rem 1.5rem;
+    }
+  }
+
+  .container__text-container__title {
+    color: $veryDarkDesaturatedBlueTextColor;
+    font-size: 32px;
+    position: relative;
+    right: 2px;
+    top: -2px;
+
+    @include mqMaxW(1200px) {
+      position: static;
+      right: 0;
+      top: 0;
+      text-align: center;
+      margin: 8.25rem auto 0;
+    }
+  }
+
+  .container__text-container__questions {
+    margin-top: 1.25rem;
+    @include mqMaxW(1200px) {
+      margin-top: 0.95rem;
+    }
+  }
+}
+
+.selected-question-text {
+  padding-bottom: 10px;
+  font-weight: 1000;
+  color: $veryDarkDesaturatedBlueTextColor;
+}
+
+.selected-arrow-default {
+  transform: rotate(0deg);
+  transition: all 0.4s;
+}
+
+.selected-arrow-animation {
+  transform: rotate(180deg);
+  transition: all 0.4s;
+}
