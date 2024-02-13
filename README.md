@@ -1,2 +1,2 @@
 FAQ accordion card\
-DEMO:
+DEMO: https://faq-accordion-card-novakovic.netlify.app/
